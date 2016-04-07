@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular2-components by AmitThakkar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular2-components</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/AmitThakkar/Angular2-Components" class="btn">View on GitHub</a>
+      <a href="https://github.com/AmitThakkar/Angular2-Components/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AmitThakkar/Angular2-Components/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="angular2-components" class="anchor" href="#angular2-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Angular2 Components</h2>
+
+<p><strong>Angular2</strong> is on <strong>BETA</strong> now. So its great time to explore <strong>Angular2</strong> as <strong>Angular2</strong> team is mostly
+working on new features and bug fixes so no fundamental/major changes will happen in <strong>Angular2</strong> 
+application.</p>
+
+<p>So lets write our first <code>Hello World</code> application with <strong>Angular2</strong>.</p>
+
+<p><strong>index.html</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Angular 2 Hello World&lt;/<span class="pl-ent">title</span>&gt;
+    &lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>viewport<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>width=device-width, initial-scale=1<span class="pl-pds">"</span></span>&gt;
+    <span class="pl-c">&lt;!-- 1. Load libraries --&gt;</span>
+    <span class="pl-c">&lt;!-- IE required polyfills (from CDN), in this exact order --&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/tools/system.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/tools/typescript.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/angular2-polyfills.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/Rx.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    <span class="pl-c">&lt;!-- 2. Configure SystemJS --&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        <span class="pl-smi">System</span>.<span class="pl-en">config</span>({</span>
+<span class="pl-s1">            transpiler<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>typescript<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">            typescriptOptions<span class="pl-k">:</span> {emitDecoratorMetadata<span class="pl-k">:</span> <span class="pl-c1">true</span>},</span>
+<span class="pl-s1">            packages<span class="pl-k">:</span> {<span class="pl-s"><span class="pl-pds">'</span>app<span class="pl-pds">'</span></span><span class="pl-k">:</span> {defaultExtension<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>ts<span class="pl-pds">'</span></span>}}</span>
+<span class="pl-s1">        });</span>
+<span class="pl-s1">        <span class="pl-smi">System</span>.<span class="pl-en">import</span>(<span class="pl-s"><span class="pl-pds">'</span>app/main<span class="pl-pds">'</span></span>)</span>
+<span class="pl-s1">            .<span class="pl-en">then</span>(<span class="pl-c1">null</span>, <span class="pl-en">console</span>.<span class="pl-smi">error</span>.<span class="pl-en">bind</span>(<span class="pl-en">console</span>));</span>
+<span class="pl-s1">    <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>head<span class="pl-k">&gt;</span></span>
+<span class="pl-s1"><span class="pl-c">&lt;!--</span> <span class="pl-c1">3.</span> Display the application <span class="pl-c">--&gt;</span></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span>body<span class="pl-k">&gt;</span></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span>hello<span class="pl-k">-</span>world<span class="pl-k">&gt;</span>Loading<span class="pl-k">...</span><span class="pl-k">&lt;</span><span class="pl-k">/</span>hello<span class="pl-k">-</span>world<span class="pl-k">&gt;</span></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>body<span class="pl-k">&gt;</span></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>html<span class="pl-k">&gt;</span></span></pre></div>
+
+<p>In <code>index.html</code>, we are loading all required <code>.js</code> files e.g. <code>Angular2</code>, <code>TypeScript</code>, <code>System.js</code> etc. And with the
+help of <code>System.config</code> method, we are loading our main file <code>main.ts</code>.</p>
+
+<blockquote>
+<p>We are using <code>Type-Script</code> therefore in <code>System.config</code> transpiler is <code>typescript</code>, and defaultExtension is <code>ts</code>.</p>
+</blockquote>
+
+<p>Element <code>&lt;hello-world&gt;</code> tag will display <strong>Loading...</strong> till <code>HelloWorld</code> component does not gets loaded successfully.</p>
+
+<p><strong>main.ts</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> {<span class="pl-smi">bootstrap</span>}  <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>angular2/platform/browser<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span> {<span class="pl-smi">HelloWorld</span>} <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>./hello_world<span class="pl-pds">'</span></span>;
+<span class="pl-en">bootstrap</span>(HelloWorld);</pre></div>
+
+<p>In <code>main.ts</code>, we are requiring <strong>bootstrap</strong> package from <code>angular2/platform/browser</code> and <strong>HelloWorld</strong> package from
+<code>./hello_world</code>.</p>
+
+<blockquote>
+<p><strong>bootstrap</strong> package bootstrap the <strong>Angular2</strong> app with provided package.</p>
+</blockquote>
+
+<p>And on third line, we are bootstrapping <strong>HelloWorld</strong> package, so this package will be available in <code>index.html</code>.</p>
+
+<p><strong>hello_world.ts</strong></p>
+
+<div class="highlight highlight-source-js"><pre>
+<span class="pl-c">// Require Component package from `angular2/core` package, so Angular can recognize that it is a component.</span>
+
+<span class="pl-k">import</span> {<span class="pl-smi">Component</span>} <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>angular2/core<span class="pl-pds">'</span></span>;
+
+<span class="pl-c">// Below is the decorator, and we define configurations in the decorator for component.</span>
+
+@<span class="pl-en">Component</span>({
+
+    <span class="pl-c">// Defining selector for the component so that we can tag component/directive in .html file to the attached component.</span>
+
+    selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>hello-world<span class="pl-pds">'</span></span>,
+
+    <span class="pl-c">// Providing .html for the component. You can provide HTML directly with property template as we do in Angular1.X</span>
+
+    templateUrl<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>app/hello_world.html<span class="pl-pds">'</span></span>
+})
+
+<span class="pl-c">/*</span>
+<span class="pl-c"> * Following is the TypeScript Class, which will be compiled into old JavaScript Class.</span>
+<span class="pl-c"> * And we are exporting it so it will be available in other files and modules.</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> */</span>
+
+<span class="pl-k">export</span> <span class="pl-k">class</span> <span class="pl-en">HelloWorld</span> {
+    <span class="pl-c">// Declaring the variable to bind with initial value</span>
+    name<span class="pl-k">:</span>string <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;
+}</pre></div>
+
+<p>In <code>hello_world.ts</code> we are requiring <strong>Component</strong> package form <code>angular2/core</code> so <strong>Angular2</strong> will be able to recognize
+that it is a component.</p>
+
+<p>With <code>@Component</code> decorator, we are providing configuration for component. i.e. selector and templateUrl.</p>
+
+<p>And in last, we are exporting <strong>Type-Script</strong> class. So this component will be available in other files and modules
+where it will be imported and we are defining a property <strong>name</strong> in HelloWorld class.</p>
+
+<p><strong>hello_world.html</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">label</span>&gt;Name:&lt;/<span class="pl-ent">label</span>&gt;
+<span class="pl-c">&lt;!-- data-bind to the input element; store value in name --&gt;</span>
+&lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> [(<span class="pl-e">ngModel</span>)]=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">"</span>Enter a name here<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">hr</span>&gt;
+<span class="pl-c">&lt;!-- conditionally display `name` --&gt;</span>
+&lt;<span class="pl-ent">h1</span> [<span class="pl-e">hidden</span>]=<span class="pl-s"><span class="pl-pds">"</span>!name<span class="pl-pds">"</span></span>&gt;Hello {{name}}!&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>
+
+<p>In <code>hello_world.html</code> we are doing 2-way-data binding for name property on input. And showing <code>Hello {{name}}</code> if 
+name is present.</p>
+
+<blockquote>
+<p>For 2-way-binding, we are using [(ngModel)] and for hiding element we are using [hidden] attribute.</p>
+</blockquote>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/AmitThakkar/Angular2-Components">Angular2-components</a> is maintained by <a href="https://github.com/AmitThakkar">AmitThakkar</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
