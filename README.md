@@ -16,13 +16,13 @@ So lets write our first `Hello World` application with **Angular2**.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 1. Load libraries -->
     <!-- IE required polyfills (from CDN), in this exact order -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
     <script src="https://code.angularjs.org/tools/system.js"></script>
     <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2-polyfills.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.17/angular2.dev.js"></script>
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
