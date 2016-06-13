@@ -118,9 +118,11 @@ name is present.
 > For 2-way-binding, we are using [(ngModel)] and for hiding element we are using [hidden] attribute.
 
 Follow Me
+---
+[Github](https://github.com/AmitThakkar)
 
-* [Github](https://github.com/AmitThakkar)
-* [Twitter](https://twitter.com/amit_thakkar01)
-* [LinkedIn](https://in.linkedin.com/in/amitthakkar01)
+[Twitter](https://twitter.com/amit_thakkar01)
+
+[LinkedIn](https://in.linkedin.com/in/amitthakkar01)
 
 [More Blogs By Me](http://amitthakkar.github.io/)
