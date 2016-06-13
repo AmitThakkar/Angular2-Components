@@ -37,13 +37,13 @@ application.</p>
     &lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>viewport<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>width=device-width, initial-scale=1<span class="pl-pds">"</span></span>&gt;
     <span class="pl-c">&lt;!-- 1. Load libraries --&gt;</span>
     <span class="pl-c">&lt;!-- IE required polyfills (from CDN), in this exact order --&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.1/es6-shim.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
 <span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
 <span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/tools/system.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
 <span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/tools/typescript.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/angular2-polyfills.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/Rx.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.17/angular2-polyfills.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.17/Rx.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.angularjs.org/2.0.0-beta.17/angular2.dev.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
     <span class="pl-c">&lt;!-- 2. Configure SystemJS --&gt;</span>
 <span class="pl-s1">    &lt;<span class="pl-ent">script</span>&gt;</span>
 <span class="pl-s1">        <span class="pl-smi">System</span>.<span class="pl-en">config</span>({</span>
@@ -53,13 +53,13 @@ application.</p>
 <span class="pl-s1">        });</span>
 <span class="pl-s1">        <span class="pl-smi">System</span>.<span class="pl-en">import</span>(<span class="pl-s"><span class="pl-pds">'</span>app/main<span class="pl-pds">'</span></span>)</span>
 <span class="pl-s1">            .<span class="pl-en">then</span>(<span class="pl-c1">null</span>, <span class="pl-en">console</span>.<span class="pl-smi">error</span>.<span class="pl-en">bind</span>(<span class="pl-en">console</span>));</span>
-<span class="pl-s1">    <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></span>
-<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>head<span class="pl-k">&gt;</span></span>
-<span class="pl-s1"><span class="pl-c">&lt;!--</span> <span class="pl-c1">3.</span> Display the application <span class="pl-c">--&gt;</span></span>
-<span class="pl-s1"><span class="pl-k">&lt;</span>body<span class="pl-k">&gt;</span></span>
-<span class="pl-s1"><span class="pl-k">&lt;</span>hello<span class="pl-k">-</span>world<span class="pl-k">&gt;</span>Loading<span class="pl-k">...</span><span class="pl-k">&lt;</span><span class="pl-k">/</span>hello<span class="pl-k">-</span>world<span class="pl-k">&gt;</span></span>
-<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>body<span class="pl-k">&gt;</span></span>
-<span class="pl-s1"><span class="pl-k">&lt;</span><span class="pl-k">/</span>html<span class="pl-k">&gt;</span></span></pre></div>
+<span class="pl-s1">    &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+<span class="pl-c">&lt;!-- 3. Display the application --&gt;</span>
+&lt;<span class="pl-ent">body</span>&gt;
+&lt;<span class="pl-ent">hello</span><span class="pl-e">-world</span>&gt;Loading...&lt;/<span class="pl-ent">hello</span><span class="pl-e">-world</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
 
 <p>In <code>index.html</code>, we are loading all required <code>.js</code> files e.g. <code>Angular2</code>, <code>TypeScript</code>, <code>System.js</code> etc. And with the
 help of <code>System.config</code> method, we are loading our main file <code>main.ts</code>.</p>
